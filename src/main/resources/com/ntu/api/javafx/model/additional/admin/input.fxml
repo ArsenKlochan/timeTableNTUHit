@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="adminDlgInput" prefHeight="166.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ntu.api.controller.additional.admin.inputController">
+   <children>
+      <MenuBar layoutY="14.0" AnchorPane.bottomAnchor="150.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+                  <MenuItem mnemonicParsing="false" onAction="#okOnClick" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+                  <Menu mnemonicParsing="false" text="Add">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#addBuilding" text="Building" />
+                        <MenuItem mnemonicParsing="false" onAction="#addClassroom" text="Classroom" />
+                        <MenuItem mnemonicParsing="false" onAction="#addCourse" text="Course" />
+                        <MenuItem mnemonicParsing="false" onAction="#addCurriculum" text="Curriculum" />
+                        <MenuItem mnemonicParsing="false" onAction="#addDepartment" text="Department" />
+                        <MenuItem mnemonicParsing="false" onAction="#addGroup" text="Group" />
+                        <MenuItem mnemonicParsing="false" onAction="#addLesson" text="Lesson" />
+                        <MenuItem mnemonicParsing="false" onAction="#addTeacher" text="Teacher" />
+                        <MenuItem mnemonicParsing="false" onAction="#addSpesiality" text="Spesiality" />
+                        <MenuItem mnemonicParsing="false" onAction="#addSubject" text="Subject" />
+                        <MenuItem mnemonicParsing="false" onAction="#addFaculty" text="Faculty" />
+                    </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Edit">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#editBuilding" text="Building" />
+                        <MenuItem mnemonicParsing="false" onAction="#editClassroom" text="Classroom" />
+                        <MenuItem mnemonicParsing="false" onAction="#editCourse" text="Course" />
+                        <MenuItem mnemonicParsing="false" onAction="#editCurriculum" text="Curriculum" />
+                        <MenuItem mnemonicParsing="false" onAction="#editDepartment" text="Department" />
+                        <MenuItem mnemonicParsing="false" onAction="#editGroup" text="Group" />
+                        <MenuItem mnemonicParsing="false" onAction="#editLesson" text="Lesson" />
+                        <MenuItem mnemonicParsing="false" onAction="#editSpesiality" text="Spesiality" />
+                        <MenuItem mnemonicParsing="false" onAction="#editSubject" text="Subject" />
+                        <MenuItem mnemonicParsing="false" onAction="#editTeacher" text="Teacher" />
+                        <MenuItem mnemonicParsing="false" onAction="#editFaculty" text="Faculty" />
+                    </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Delete">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#deleteBuilding" text="Building" />
+                        <MenuItem mnemonicParsing="false" onAction="#deleteClassroom" text="Classroom" />
+                        <MenuItem mnemonicParsing="false" onAction="#deleteCourse" text="Course" />
+                        <MenuItem mnemonicParsing="false" onAction="#deleteCurriculum" text="Curriculum" />
+                        <MenuItem mnemonicParsing="false" onAction="#deleteDepartment" text="Department" />
+                        <MenuItem mnemonicParsing="false" onAction="#deleteGroup" text="Group" />
+                        <MenuItem mnemonicParsing="false" onAction="#deleteLesson" text="Lesson" />
+                        <MenuItem mnemonicParsing="false" onAction="#deleteSpesiality" text="Spesiality" />
+                        <MenuItem mnemonicParsing="false" onAction="#deleteSubject" text="Subject" />
+                        <MenuItem mnemonicParsing="false" onAction="#deleteTeacher" text="Teacher" />
+                        <MenuItem mnemonicParsing="false" onAction="#deleteFaculty" text="Faculty" />
+                    </items>
+                  </Menu>
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <GridPane layoutX="60.0" layoutY="102.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="50.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <GridPane>
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <MenuButton alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Додати" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#addClassroom" text="Аудиторію" />
+                        <MenuItem mnemonicParsing="false" onAction="#addTeacher" text="Викладача" />
+                        <MenuItem mnemonicParsing="false" onAction="#addGroup" text="Групу" />
+                        <MenuItem mnemonicParsing="false" onAction="#addLesson" text="Дисципліну" />
+                        <MenuItem mnemonicParsing="false" onAction="#addDepartment" text="Кафедру" />
+                        <MenuItem mnemonicParsing="false" onAction="#addBuilding" text="Корпус" />
+                        <MenuItem mnemonicParsing="false" onAction="#addCourse" text="Курс" />
+                        <MenuItem mnemonicParsing="false" onAction="#addCurriculum" text="Освітню програму" />
+                        <MenuItem mnemonicParsing="false" onAction="#addSubject" text="Предмет" />
+                        <MenuItem mnemonicParsing="false" onAction="#addSpesiality" text="Спеціальність" />
+                        <MenuItem mnemonicParsing="false" onAction="#addFaculty" text="Факультет" />
+                    </items>
+                     <GridPane.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </GridPane.margin>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </MenuButton>
+                  <MenuButton alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Редагувати" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS" GridPane.columnIndex="1">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#editClassroom" text="Аудиторію" />
+                        <MenuItem mnemonicParsing="false" onAction="#editTeacher" text="Викладача" />
+                        <MenuItem mnemonicParsing="false" onAction="#editGroup" text="Групу" />
+                        <MenuItem mnemonicParsing="false" onAction="#editLesson" text="Дисципліну" />
+                        <MenuItem mnemonicParsing="false" onAction="#editDepartment" text="Кафедру" />
+                        <MenuItem mnemonicParsing="false" onAction="#editBuilding" text="Корпус" />
+                        <MenuItem mnemonicParsing="false" onAction="#editCourse" text="Курс" />
+                        <MenuItem mnemonicParsing="false" onAction="#editCurriculum" text="Освітню програму" />
+                        <MenuItem mnemonicParsing="false" onAction="#editSubject" text="Предмет" />
+                        <MenuItem mnemonicParsing="false" onAction="#editSpesiality" text="Спеціальність" />
+                        <MenuItem mnemonicParsing="false" onAction="#editFaculty" text="Факультет" />
+                    </items>
+                     <GridPane.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </GridPane.margin>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </MenuButton>
+                  <MenuButton alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Видалити" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS" GridPane.columnIndex="2">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#deleteClassroom" text="Аудиторію" />
+                        <MenuItem mnemonicParsing="false" onAction="#deleteTeacher" text="Викладача" />
+                        <MenuItem mnemonicParsing="false" onAction="#deleteGroup" text="Групу" />
+                        <MenuItem mnemonicParsing="false" onAction="#deleteLesson" text="Дисципліну" />
+                        <MenuItem mnemonicParsing="false" onAction="#deleteDepartment" text="Кафедру" />
+                        <MenuItem mnemonicParsing="false" onAction="#deleteBuilding" text="Корпус" />
+                        <MenuItem mnemonicParsing="false" onAction="#deleteCourse" text="Курс" />
+                        <MenuItem mnemonicParsing="false" onAction="#deleteCurriculum" text="Освітню програму" />
+                        <MenuItem mnemonicParsing="false" onAction="#deleteSpesiality" text="Спеціальність" />
+                        <MenuItem mnemonicParsing="false" onAction="#deleteFaculty" text="Факультет" />
+                        <MenuItem mnemonicParsing="false" onAction="#deleteSubject" text="Subject" />
+                    </items>
+                     <GridPane.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </GridPane.margin>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </MenuButton>
+               </children>
+            </GridPane>
+            <GridPane GridPane.rowIndex="1">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#okOnClick" text="Ok">
+                     <GridPane.margin>
+                        <Insets bottom="150.0" left="150.0" right="150.0" top="150.0" />
+                     </GridPane.margin>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Button>
+               </children>
+            </GridPane>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

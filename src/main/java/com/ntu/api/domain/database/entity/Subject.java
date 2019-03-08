@@ -47,8 +47,7 @@ public class Subject {
     @Enumerated(EnumType.ORDINAL)
     private ExamType examType;
 
-    @OneToMany(fetch = FetchType.EAGER, mappedBy = "subject", targetEntity = Lesson.class)
-    @Column(name = "lessons")
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "subject", targetEntity = Lesson.class)
     private List<Lesson> lessons = new ArrayList<>();
 
     private Subject(){}

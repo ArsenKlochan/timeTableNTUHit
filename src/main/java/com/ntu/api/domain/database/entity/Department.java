@@ -27,15 +27,12 @@ public class Department {
     private Faculty faculty;
 
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "department", targetEntity = Speciality.class)
-    @Column(name = "department_specialities")
     private List<Speciality> specialities = new ArrayList<>();
 
     @OneToMany(fetch = FetchType.EAGER, mappedBy = "department", targetEntity = Teacher.class)
-    @Column(name = "teacher")
     private List<Teacher> teachers = new ArrayList<>();
 
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "department", targetEntity = ClassRoom.class)
-    @Column(name = "classRoom")
     private List<ClassRoom> classRooms = new ArrayList<>();
 
     public Department(){}
@@ -113,7 +110,7 @@ public class Department {
     private String specialitiesToString(){
         StringBuilder sb = new StringBuilder();
         for(Speciality speciality: specialities){
-            sb.append(speciality.getSpecialityCode() + " " + speciality.getSpecialityName() + "/n");
+            sb.append(speciality.getSpecialityId() + " " + speciality.getSpecialityName() + "/n");
         }
         return sb.toString();
     }

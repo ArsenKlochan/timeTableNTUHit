@@ -24,11 +24,9 @@ public class Course {
     private Speciality speciality;
 
     @OneToMany(fetch = FetchType.EAGER, mappedBy = "course", targetEntity = Group.class)
-    @Column(name = "course_groups")
     private List<Group> groups = new ArrayList<>();
 
-    @OneToMany(fetch = FetchType.EAGER, mappedBy = "course", targetEntity = Subject.class)
-    @Column(name = "course_subject")
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "course", targetEntity = Subject.class)
     private List<Subject> subjects = new ArrayList<>();
 
     public Course(){}

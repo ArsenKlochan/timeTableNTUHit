@@ -23,7 +23,6 @@ public class Building {
     private String buildingAdress;
 
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "building", targetEntity = ClassRoom.class)
-    @Column(name = "building_classrooms")
     private List<ClassRoom> classRooms= new ArrayList<>();
 
     public Building(){}

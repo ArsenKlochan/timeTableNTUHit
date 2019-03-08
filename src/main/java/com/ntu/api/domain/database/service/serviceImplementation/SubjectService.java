@@ -4,9 +4,10 @@ import com.ntu.api.domain.database.dao.DAOinterface.SubjectDAOInt;
 import com.ntu.api.domain.database.entity.Subject;
 import com.ntu.api.domain.database.service.serviceInterface.SubjectServiceInt;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
-
+@Service
 public class SubjectService implements SubjectServiceInt {
     @Autowired
     private SubjectDAOInt subjectDAO;

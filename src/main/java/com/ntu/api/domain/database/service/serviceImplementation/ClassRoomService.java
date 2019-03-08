@@ -4,9 +4,10 @@ import com.ntu.api.domain.database.dao.DAOinterface.ClassRoomDAOInt;
 import com.ntu.api.domain.database.entity.ClassRoom;
 import com.ntu.api.domain.database.service.serviceInterface.ClassRoomServiceInt;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
-
+@Service
 public class ClassRoomService implements ClassRoomServiceInt {
     @Autowired
     private ClassRoomDAOInt classRoomDAO;

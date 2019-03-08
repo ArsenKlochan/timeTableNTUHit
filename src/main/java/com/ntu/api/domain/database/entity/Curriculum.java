@@ -27,7 +27,6 @@ public class Curriculum {
     private Faculty faculty;
 
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "curriculum", targetEntity = Speciality.class)
-    @Column(name = "curriculum_specialities")
     private List<Speciality> specialities = new ArrayList<>();
 
     public Curriculum(){}
@@ -88,7 +87,7 @@ public class Curriculum {
     private String specialitiesToString(){
         StringBuilder sb = new StringBuilder();
         for(Speciality speciality: specialities){
-            sb.append(speciality.getSpecialityCode() + " " + speciality.getSpecialityName() + "/n");
+            sb.append(speciality.getSpecialityId() + " " + speciality.getSpecialityName() + "/n");
         }
         return sb.toString();
     }

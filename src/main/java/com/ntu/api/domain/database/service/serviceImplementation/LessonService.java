@@ -4,9 +4,10 @@ import com.ntu.api.domain.database.dao.DAOinterface.LessonDAOInt;
 import com.ntu.api.domain.database.entity.Lesson;
 import com.ntu.api.domain.database.service.serviceInterface.LessonServiceInt;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
-
+@Service
 public class LessonService implements LessonServiceInt {
     @Autowired
     private LessonDAOInt lessonDAO;

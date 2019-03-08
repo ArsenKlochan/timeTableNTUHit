@@ -31,7 +31,7 @@ public class Teacher {
     private String teacherDescription;
 
     @ManyToOne(fetch = FetchType.EAGER, targetEntity = Department.class)
-    @JoinColumn(name = "department_cod", nullable = false)
+    @JoinColumn(name = "department_id", nullable = false)
     private Department department;
 
     public Teacher(){}

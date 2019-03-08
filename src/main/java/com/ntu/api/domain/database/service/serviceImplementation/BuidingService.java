@@ -4,9 +4,10 @@ import com.ntu.api.domain.database.dao.DAOinterface.BuildingDAOInt;
 import com.ntu.api.domain.database.entity.Building;
 import com.ntu.api.domain.database.service.serviceInterface.BuildingServiceInt;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
-
+@Service
 public class BuidingService implements BuildingServiceInt {
     @Autowired
     private BuildingDAOInt buildingDAO;

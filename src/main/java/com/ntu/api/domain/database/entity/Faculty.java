@@ -23,11 +23,9 @@ public class Faculty {
     private String facultyAdress;
 
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "faculty", targetEntity = Curriculum.class)
-    @Column(name="faculty_curriculums")
     private List<Curriculum> curriculums = new ArrayList<>();
 
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "faculty", targetEntity = Department.class)
-    @Column(name="faculty_departments")
     private List<Department> departments = new ArrayList<>();
 
     public Faculty(){}

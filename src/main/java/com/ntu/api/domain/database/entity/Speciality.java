@@ -28,7 +28,6 @@ public class Speciality {
     private Department department;
 
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "speciality", targetEntity = Course.class)
-    @Column(name = "speciality_courses")
     private List<Course> courses = new ArrayList<>();
 
     public Speciality(){}

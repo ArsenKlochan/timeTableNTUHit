@@ -32,13 +32,13 @@ public class MainController {
         authentication.initOwner(main.getScene().getWindow());
         authentication.initModality(Modality.WINDOW_MODAL);
 
-        authentication.setOnCloseRequest(new EventHandler<WindowEvent>() {
-            @Override
-            public void handle(WindowEvent event) {
-                Stage dlg = (Stage)(main.getScene().getWindow());
-                dlg.close();
-            }
-        });
+//        authentication.setOnCloseRequest(new EventHandler<WindowEvent>() {
+//            @Override
+//            public void handle(WindowEvent event) {
+//                Stage dlg = (Stage)(main.getScene().getWindow());
+//                dlg.close();
+//            }
+//        });
         authentication.setScene(new Scene(dlgAuthentication));
         authentication.show();
     }

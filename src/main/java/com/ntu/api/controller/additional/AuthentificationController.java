@@ -87,7 +87,7 @@ public class AuthentificationController {
 
     public void okOnClick(){
         Stage dlg = (Stage) dlgAuthentification.getScene().getWindow();
-        dlg.getOnCloseRequest().handle(new WindowEvent(dlg, WindowEvent.WINDOW_CLOSE_REQUEST));
+//        dlg.getOnCloseRequest().handle(new WindowEvent(dlg, WindowEvent.WINDOW_CLOSE_REQUEST));
         dlg.close();
     }
 

@@ -33,7 +33,7 @@ public class LessonService implements LessonServiceInt {
     }
 
     @Override
-    public List<Lesson> getLessonss() {
+    public List<Lesson> getLessons() {
         return lessonDAO.findAll();
     }
 }

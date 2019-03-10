@@ -56,7 +56,6 @@ public class AuthentificationController {
                 if (!userService.authentUser(new User(fldLogin.getText(), fldPassword.getText()))) {
                     Message.errorCatch(dlgAuthentification, "Error", "Ви ввели невірний логін або пароль.");
                 } else {
-//                closeOnClick();
                     okOnClick();
                     Stage dlgStart = new Stage();
                     dlgStart.setTitle("NTU TimeTable 1.2.0");
@@ -87,7 +86,6 @@ public class AuthentificationController {
 
     public void okOnClick(){
         Stage dlg = (Stage) dlgAuthentification.getScene().getWindow();
-//        dlg.getOnCloseRequest().handle(new WindowEvent(dlg, WindowEvent.WINDOW_CLOSE_REQUEST));
         dlg.close();
     }
 

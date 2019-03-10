@@ -1,5 +1,5 @@
 package com.ntu.api.domain.database.entity.enums;
 
 public enum ClassRoomTypes {
-    lectureClassRoom, laboratoryClassRoom, UniversalClassRoom, PracticalClassRoom, SpesificClassRoom, AdministrationClassRoom
+    потокова_лекційна_аудиторія,компютерний_клас, лабараторія, універсальна_аудиторія, специфічна_аудиторія, адміністративна_аудиторія
 }
